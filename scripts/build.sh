@@ -17,8 +17,19 @@ EOL
 
 # Combine all slides (extract just the slide div)
 for slide in src/slides/slide-*.html; do
-    # Extract the content between <div class="slide"...> and </div> (including styles)
-    sed -n '/<div class="slide"/,/<\/div>/p' "$slide" >> dist/presentation.html
+    # Use awk to properly handle nested divs and ignore html/body tags
+    awk '
+        /<div class="slide"/ {
+            p=1
+            count=1
+        }
+        p && !/<\/?(!DOCTYPE|html|head|body)/ {
+            print
+            if (/<div/) count++
+            if (/<\/div>/) count--
+            if (count==0) p=0
+        }
+    ' "$slide" >> dist/presentation.html
 done
 
 # Close the HTML
