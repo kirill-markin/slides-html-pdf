@@ -7,7 +7,7 @@ Simple HTML presentations with version control.
 src/
 ├── slides/     # HTML slides (slide-XX.html)
 └── assets/     # Styles (base.css) and images
-scripts/        # build.sh, pdf.sh
+scripts/        # presentation.sh
 dist/           # Generated files (gitignored)
 ```
 

@@ -6,10 +6,9 @@ Simple HTML presentations with version control. Each slide is a separate HTML fi
 
 1. Create slides in `src/slides/` as `slide-XX.html`
 2. Preview with Live Server in your IDE
-3. Generate PDF:
+3. Generate HTML & PDF:
 ```bash
-./scripts/build.sh  # Combines slides
-./scripts/pdf.sh    # Creates PDF
+./scripts/presentation.sh  # Builds HTML and creates PDF
 ```
 
 ## Structure
