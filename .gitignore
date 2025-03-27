@@ -1,0 +1,19 @@
+# Build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Logs
+*.log

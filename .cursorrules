@@ -1,0 +1,27 @@
+# HTML Slides as Code
+
+Simple HTML presentations with version control.
+
+## Structure
+```
+src/
+├── slides/     # HTML slides (slide-XX.html)
+└── assets/     # Styles (base.css) and images
+scripts/        # build.sh, pdf.sh
+dist/           # Generated files (gitignored)
+```
+
+## Core Rules
+- All slides in `src/slides/`
+- Name format: `slide-XX.html` (01-99)
+- Styles: base.css + scoped in slides
+- 16:9 ratio (1280x720px)
+- Scripts run from root
+- PDF: one slide per page
+
+## Best Practices
+- Semantic HTML5
+- Modern CSS, no external deps
+- Optimize images
+- Accessible content
+- Clean commits 
