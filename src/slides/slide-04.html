@@ -1,0 +1,134 @@
+<div class="slide" id="slide-4">
+    <div class="content">
+        <h1>Thank You, Maria!</h1>
+        <p>For making the world a more beautiful place every day</p>
+    </div>
+    
+    <div class="hearts-container">
+        <!-- Multiple decorative hearts -->
+        <svg class="heart" viewBox="0 0 24 24" width="30" height="30">
+            <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="#e74c3c"></path>
+        </svg>
+        <svg class="heart" viewBox="0 0 24 24" width="20" height="20">
+            <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="#e74c3c"></path>
+        </svg>
+        <svg class="heart" viewBox="0 0 24 24" width="25" height="25">
+            <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="#e74c3c"></path>
+        </svg>
+        <svg class="heart" viewBox="0 0 24 24" width="15" height="15">
+            <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="#e74c3c"></path>
+        </svg>
+        <svg class="heart" viewBox="0 0 24 24" width="22" height="22">
+            <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" fill="#e74c3c"></path>
+        </svg>
+    </div>
+    
+    <div class="decorative-circle"></div>
+    
+    <style>
+        #slide-4 {
+            background: linear-gradient(45deg, #d6eaf8, #85c1e9);
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #slide-4 .content {
+            max-width: 80%;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.03); }
+        }
+
+        #slide-4 h1 {
+            font-size: 4.5em;
+            margin-bottom: 0.3em;
+            color: #1a5276;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #slide-4 p {
+            font-size: 2em;
+            opacity: 0.9;
+        }
+        
+        #slide-4 .decorative-circle {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(173, 216, 230, 0.6) 0%, rgba(173, 216, 230, 0) 70%);
+            z-index: 1;
+            animation: rotate 30s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        #slide-4 .hearts-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        #slide-4 .heart {
+            position: absolute;
+            opacity: 0.7;
+            filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+        }
+        
+        #slide-4 .heart:nth-child(1) {
+            top: 20%;
+            left: 20%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        #slide-4 .heart:nth-child(2) {
+            top: 15%;
+            right: 25%;
+            animation: float 7s ease-in-out 1s infinite;
+        }
+        
+        #slide-4 .heart:nth-child(3) {
+            bottom: 25%;
+            left: 15%;
+            animation: float 9s ease-in-out 2s infinite;
+        }
+        
+        #slide-4 .heart:nth-child(4) {
+            bottom: 20%;
+            right: 30%;
+            animation: float 6s ease-in-out 1.5s infinite;
+        }
+        
+        #slide-4 .heart:nth-child(5) {
+            top: 40%;
+            right: 15%;
+            animation: float 8s ease-in-out 0.5s infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+    </style>
+</div> 

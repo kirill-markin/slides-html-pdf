@@ -1,30 +1,92 @@
 <div class="slide" id="slide-1">
+    <div class="decorative-frame"></div>
     <div class="content">
-        <h1>LLM-Powered HTML Presentation Generator</h1>
-        <p>A minimalist approach to creating presentations using plain HTML and AI assistance</p>
+        <h1>Maria: A Portrait of Excellence</h1>
+        <p>An introduction to a remarkable individual</p>
+        <div class="decorative-stars">
+            <svg class="star" viewBox="0 0 24 24" width="60" height="60">
+                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="#ffcc00" stroke="#ff9900" stroke-width="0.5"></polygon>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" width="40" height="40">
+                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="#ffcc00" stroke="#ff9900" stroke-width="0.5"></polygon>
+            </svg>
+            <svg class="star" viewBox="0 0 24 24" width="50" height="50">
+                <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="#ffcc00" stroke="#ff9900" stroke-width="0.5"></polygon>
+            </svg>
+        </div>
     </div>
     <style>
         #slide-1 {
-            background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
-            color: white;
+            background: linear-gradient(45deg, #f5d5cb, #ffdde1);
+            color: #333;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         #slide-1 .content {
             max-width: 80%;
+            z-index: 2;
         }
 
         #slide-1 h1 {
             font-size: 4em;
             margin-bottom: 0.3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         #slide-1 p {
             font-size: 1.8em;
-            opacity: 0.9;
+            opacity: 0.8;
+        }
+
+        #slide-1 .decorative-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 8px solid rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        #slide-1 .decorative-stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        #slide-1 .star:nth-child(1) {
+            position: absolute;
+            top: 15%;
+            right: 20%;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        #slide-1 .star:nth-child(2) {
+            position: absolute;
+            bottom: 20%;
+            left: 15%;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        #slide-1 .star:nth-child(3) {
+            position: absolute;
+            top: 70%;
+            right: 30%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
         }
     </style>
 </div> 
