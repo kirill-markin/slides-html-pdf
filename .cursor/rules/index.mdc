@@ -1,0 +1,107 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# HTML Presentations as Code
+
+Simple HTML presentations with version control. Create beautiful presentations using HTML and CSS, then convert them to PDF for distribution.
+
+## Project Structure
+```
+.
+├── src/                    # Source directory
+│   ├── *.html             # HTML presentation files
+│   └── assets/            # Static assets
+│       └── styles/
+│           └── base.css   # Required base styles for all presentations
+├── scripts/               # Utility scripts
+│   └── presentation.sh    # Converts HTML files to PDF (src/*.html → dist/*.pdf)
+└── dist/                  # Generated PDF files (gitignored)
+    └── *.pdf             # Each HTML presentation converted to PDF
+```
+
+## Core Rules
+
+### Presentation Files
+- Each HTML file in `src/` represents a complete presentation
+- All presentations MUST include base.css from assets/styles
+- Use descriptive names for presentation files (e.g., `company-overview-2024.html`)
+- Each presentation is self-contained with its own styles
+- Follow 16:9 ratio (1280x720px) for optimal viewing
+
+### PDF Generation
+- Run scripts from the project root
+- Use `scripts/presentation.sh` to convert presentations
+- Each HTML file generates a corresponding PDF in `dist/`
+- PDFs maintain the same name as source HTML files
+
+## CSS Guidelines
+
+### Base Styles
+- Include base.css as the first stylesheet:
+  ```html
+  <link rel="stylesheet" href="../src/assets/styles/base.css">
+  ```
+- Base.css provides:
+  - Page size and margins
+  - Basic typography
+  - Grid layouts
+  - Print optimizations
+
+### Custom Styles
+- Use unique IDs for major sections to avoid conflicts
+- Define presentation-specific styles within the HTML file
+- Consider using CSS variables for consistent theming
+- Avoid generic class selectors that might conflict
+- Override base styles only when necessary
+
+## Best Practices
+
+### Development
+- Use semantic HTML5 elements
+- Keep CSS modern but avoid external dependencies
+- Optimize images before including them
+- Make content accessible (proper headings, alt text)
+- Test presentations in multiple browsers
+- Include proper viewport settings
+
+### Version Control
+- Make clean, focused commits
+- Include meaningful commit messages
+- Keep presentations in version control
+- Ignore generated files (dist/*.pdf)
+
+### Workflow
+1. Create new HTML file in `src/`
+2. Include base.css
+3. Add content and custom styles
+4. Test in browsers
+5. Run presentation.sh to generate PDF
+6. Commit source files only
+
+## Script Usage
+
+Convert all presentations:
+```bash
+./scripts/presentation.sh
+```
+
+Convert specific presentation:
+```bash
+./scripts/presentation.sh src/my-presentation.html
+```
+
+## Common Issues
+
+### PDF Generation
+- Ensure all assets are properly linked
+- Check print styles in base.css
+- Verify page breaks between slides
+- Test PDF output for correct formatting
+
+### Browser Compatibility
+- Test in Chrome/Firefox/Safari
+- Verify animations work correctly
+- Check font rendering
+- Ensure responsive behavior 

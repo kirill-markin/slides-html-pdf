@@ -2,7 +2,7 @@
 temp/
 
 # Build output
-dist/
+dist/*.pdf
 
 # OS files
 .DS_Store
@@ -20,3 +20,12 @@ Thumbs.db
 
 # Logs
 *.log
+
+# User files
+src/assets/
+src/*.html
+
+# Exclude example files
+!src/assets/styles/base.css
+!src/example.html
+!dist/example.pdf
